@@ -1,0 +1,34 @@
+For var variable: This variable function can be redeclared and not updated.
+
+function trailVar() {
+  var Lucky = 10yrs;
+  if (true) {
+    var Lucky = 20yrs;
+    console.log(Lucky); // the output == 20yrs
+  }
+  console.log(Lucky); // the output == 20yrs
+}
+
+
+
+For let variable: This variable function can be updated but not redeclared.
+
+function testLet() {
+  let Lucky = 10yrs;
+  if (true) {
+    let Lucky = 20yrs;
+    console.log(Lucky); // the output == 20yrs
+  }
+  console.log(Lucky); // the output == 10yrs
+}
+
+
+
+
+For const variable: This variable function cannot be updated or redeclared. Const variable is always defined, if not, it'll show error.
+
+function testConst() {
+  const Lucky = 10yrs;
+  // Lucky = 20yrs; // Error: Assignment to constant variable.
+  console.log(Lucky); // the output == 10yrs
+}
